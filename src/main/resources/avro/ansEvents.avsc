@@ -1,0 +1,138 @@
+{
+  "type": "record",
+  "name": "ANSEvent",
+  "namespace": "com.amr.ans",
+  "doc": "json schema",
+  "fields": [
+    {
+      "name": "specversion",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      },
+      "doc": "version of events"
+    },
+    {
+      "name": "x_ues_specversion",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      },
+      "doc": "value of contents"
+    },
+    {
+      "name": "source",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      },
+      "doc": "Origin"
+    },
+    {
+      "name": "type",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      },
+      "doc": "unique events"
+    },
+    {
+      "name": "subject",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      },
+      "doc": "frame message types"
+    },
+    {
+      "name": "time",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      },
+      "doc": "time creation",
+      "logicalType": "timestamp-millis"
+    },
+    {
+      "name": "id",
+      "type": {
+        "type": "string",
+        "avro.java.string": "String"
+      },
+      "doc": "unique event identifier"
+    },
+    {
+      "name": "x_groupkey",
+      "type": [
+        "null",
+        {
+          "type": "string",
+          "avro.java.string": "String"
+        },
+      ],
+      "doc": "group name for group key"
+    },
+    {
+      "name": "x_meta",
+      "type": {
+        "type": "record",
+        "name": "X_Meta",
+        "fields": [
+          {
+            "name": "datacontentversion",
+            "type": {
+              "type": "string",
+              "avro.java.string": "String"
+            }
+          },
+          {
+            "name": "encryption",
+            "type": [
+              "null",
+              {
+                "type": "record",
+                "name": "Encryption",
+                "fields": [
+                  {
+                    "name": "id",
+                    "type": [
+                      "null",
+                      {
+                        "type": "string",
+                        "avro.java.string": "String"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "type",
+                    "type": [
+                      "null",
+                      {
+                        "type": "string",
+                        "avro.java.string": "String"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "data",
+      "type": {
+        "type": "map",
+        "values": {
+          "type": "string",
+          "avro.java.string": "String"
+        },
+        "avro.java.string": "String",
+        "default": {}
+      },
+      "doc": "event in key value pairs"
+    }
+  ],
+  "version": "1.0"
+}

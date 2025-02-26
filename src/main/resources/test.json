@@ -1,0 +1,23 @@
+{
+  "specversion": "1.0",
+  "x_ues_specversion": "2.0",
+  "source": "systemA",
+  "type": "event.notification",
+  "subject": "user.created",
+  "time": "2025-02-26T12:34:56.789Z",
+  "id": "123e4567-e89b-12d3-a456-426614174000",
+  "x_groupkey": "group-001",
+  "x_meta": {
+    "datacontentversion": "1.0",
+    "encryption": {
+      "id": "enc-12345",
+      "type": "AES256"
+    }
+  },
+  "data": {
+    "userId": "987654",
+    "username": "john_doe",
+    "email": "john.doe@example.com",
+    "status": "active"
+  }
+}
