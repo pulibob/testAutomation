@@ -1,4 +1,4 @@
-package util;
+package com.kafka.test_automation;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -19,17 +19,15 @@ import java.util.UUID;
 @Component
 public class Utilty {
 
-    public static void main(String[] args) {
-        System.out.println(getJsonString("Testcase 1"));
-    }
 
 
-    public static String getJsonString(String testCaseName){
+
+    public  String getJsonString(String testCaseName){
        return updateIdFromJsonString(getJsonStringFromCSV(testCaseName));
     }
 
 
-    private static String getJsonStringFromCSV(String testCaseName) {
+    private  String getJsonStringFromCSV(String testCaseName) {
         try {
             ClassPathResource resource = new ClassPathResource("csv/test-data.xlsx");
             InputStream file = resource.getInputStream();
@@ -58,7 +56,7 @@ public class Utilty {
         return "No Match Found"; // Return if no match is found
     }
 
-    private static String updateIdFromJsonString(String oldJson) {
+    private String updateIdFromJsonString(String oldJson) {
 
         System.out.println("Before Update:::::" + oldJson);
         String updatedJson="";
